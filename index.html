@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#fbead6">
-  <meta name="color-scheme" content="only light">
+  <meta name="color-scheme" content="light">
   <meta name="supported-color-schemes" content="light">
   <meta name="description" content="You are warmly invited to the wedding celebrations of Cameron Isaac and Christline Jeffrenica from 27 to 29 December 2026.">
   <title>Cameron Isaac &amp; Christline Jeffrenica — Wedding Invitation</title>
@@ -14,7 +14,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23FBEAD6'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23C87D87' stroke-width='2'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-size='27' font-family='serif' fill='%23382A26'%3EC%26C%3C/text%3E%3C/svg%3E">
   <style>
     :root {
-      color-scheme: only light;
+      color-scheme: light only;
       --blush: #f0c4cb;
       --rose: #c87d87;
       --champagne: #fbead6;
@@ -29,8 +29,10 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; background: var(--champagne); }
-    body { margin: 0; min-width: 320px; color: var(--ink); background: var(--champagne); font-family: var(--sans); font-size: 16px; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    html { color-scheme: light only; forced-color-adjust: none; scroll-behavior: smooth; background-color: var(--champagne); background-image: linear-gradient(var(--champagne), var(--champagne)); }
+    body { margin: 0; min-width: 320px; color: var(--ink); forced-color-adjust: none; background-color: var(--champagne); background-image: linear-gradient(var(--champagne), var(--champagne)); font-family: var(--sans); font-size: 16px; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    body, body * { -webkit-text-fill-color: currentColor; }
+    img { color-scheme: light; filter: none; opacity: 1; mix-blend-mode: normal; }
     body.locked { overflow: hidden; }
     button, a { -webkit-tap-highlight-color: transparent; }
     button { font: inherit; }
@@ -52,7 +54,7 @@
     }
 
     /* Cover */
-    .cover { position: fixed; inset: 0; z-index: 120; display: grid; min-height: 100svh; padding: max(26px, env(safe-area-inset-top)) 24px max(28px, env(safe-area-inset-bottom)); text-align: center; isolation: isolate; background: var(--paper); transition: opacity .85s ease .35s, visibility .85s ease .35s; }
+    .cover { position: fixed; inset: 0; z-index: 120; display: grid; min-height: 100svh; padding: max(26px, env(safe-area-inset-top)) 24px max(28px, env(safe-area-inset-bottom)); text-align: center; isolation: isolate; background-color: var(--paper); background-image: linear-gradient(var(--paper), var(--paper)); transition: opacity .85s ease .35s, visibility .85s ease .35s; }
     .cover::before { content: ""; position: absolute; inset: 0; z-index: -2; background: url("assets/cover-curtains-offwhite-v4.jpg") center / cover no-repeat; transform: scale(1.01); transition: transform 1.4s cubic-bezier(.2,.7,.2,1); }
     .cover::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(255,250,243,.02), rgba(240,196,203,.035) 56%, rgba(200,125,135,.055)); }
     .cover-inner { display: grid; grid-template-rows: auto auto auto 1fr; width: min(100%, 650px); height: 100%; margin: auto; }
@@ -73,10 +75,10 @@
     .cover.is-open::before { transform: scale(1.07); }
 
     /* Navigation */
-    .page { width: 100%; overflow: clip; background: var(--champagne); }
+    .page { width: 100%; overflow: clip; background-color: var(--champagne); background-image: linear-gradient(var(--champagne), var(--champagne)); }
     .progress { position: fixed; top: 0; left: 0; z-index: 75; width: 100%; height: 3px; background: rgba(56,42,38,.06); }
     .progress span { display: block; width: 0; height: 100%; background: var(--rose); }
-    .mini-nav { position: fixed; z-index: 65; right: max(12px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); display: flex; gap: 3px; max-width: calc(100vw - 24px); padding: 6px; border: 1px solid rgba(56,42,38,.12); border-radius: 999px; background: rgba(255,250,243,.84); box-shadow: 0 12px 34px rgba(56,42,38,.12); backdrop-filter: blur(16px); opacity: 0; transform: translateY(14px); transition: opacity .5s, transform .5s; }
+    .mini-nav { position: fixed; z-index: 65; right: max(12px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); display: flex; gap: 3px; max-width: calc(100vw - 24px); padding: 6px; border: 1px solid rgba(56,42,38,.12); border-radius: 999px; background-color: rgba(255,250,243,.84); background-image: linear-gradient(rgba(255,250,243,.84), rgba(255,250,243,.84)); box-shadow: 0 12px 34px rgba(56,42,38,.12); backdrop-filter: blur(16px); opacity: 0; transform: translateY(14px); transition: opacity .5s, transform .5s; }
     body.invitation-open .mini-nav { opacity: 1; transform: none; }
     .mini-nav a { display: grid; place-items: center; width: 34px; height: 34px; color: var(--ink); border-radius: 50%; text-decoration: none; font: 400 .69rem var(--serif); }
     .mini-nav a[aria-current="true"] { color: white; background: var(--ink); }
@@ -102,19 +104,19 @@
     .page-label { position: absolute; left: 50%; bottom: 16px; color: var(--ink-soft); font: 400 .69rem var(--serif); letter-spacing: .15em; transform: translateX(-50%); }
 
     /* Page II: event scenes */
-    .events-page { background: var(--ink); }
-    .events-title { position: relative; display: grid; place-items: center; min-height: 48svh; padding: 82px 24px; color: var(--paper); text-align: center; background: var(--ink); }
+    .events-page { background-color: var(--ink); background-image: linear-gradient(var(--ink), var(--ink)); }
+    .events-title { position: relative; display: grid; place-items: center; min-height: 48svh; padding: 82px 24px; color: var(--paper); text-align: center; background-color: var(--ink); background-image: linear-gradient(var(--ink), var(--ink)); }
     .events-title h2 { max-width: 12ch; margin: 13px 0 0; font: 400 clamp(3.5rem, 14vw, 6.4rem)/.95 var(--serif); letter-spacing: -.015em; }
     .events-title h2 span { display: block; color: var(--blush); font-family: var(--serif); font-style: italic; letter-spacing: .015em; }
     .events-title .eyebrow { color: var(--bisque); }
-    .event-scene { --parallax-y: 0px; position: relative; display: flex; align-items: flex-end; min-height: 100svh; padding: 22px 20px 30px; isolation: isolate; overflow: hidden; background: var(--champagne); }
+    .event-scene { --parallax-y: 0px; position: relative; display: flex; align-items: flex-end; min-height: 100svh; padding: 22px 20px 30px; isolation: isolate; overflow: hidden; background-color: var(--champagne); background-image: linear-gradient(var(--champagne), var(--champagne)); }
     .event-scene::before { content: ""; position: absolute; inset: -5%; z-index: -2; background-position: center; background-size: cover; transform: translate3d(0, var(--parallax-y), 0) scale(1.06); will-change: transform; }
     .event-scene::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(31,23,20,.03) 22%, rgba(31,23,20,.12) 52%, rgba(31,23,20,.55) 100%); }
     .engagement::before { background-image: url("assets/engagement-illustrated-v1.jpg"); background-position: center 68%; }
     .church::before { background-image: url("assets/church-illustrated-v1.jpg"); }
     .reception::before { background-image: url("assets/reception-illustrated-v1.jpg"); }
     .encore::before { background-image: url("assets/coimbatore-encore-balcony-v1.jpg"); background-position: center; }
-    .event-card { position: relative; z-index: 1; width: min(100%, 630px); margin: 0 auto; padding: 28px 24px 24px; border: 1px solid rgba(200,125,135,.28); background: rgba(251,234,214,.96); box-shadow: 0 25px 70px rgba(35,25,21,.2); backdrop-filter: blur(16px); }
+    .event-card { position: relative; z-index: 1; width: min(100%, 630px); margin: 0 auto; padding: 28px 24px 24px; border: 1px solid rgba(200,125,135,.28); background-color: rgba(251,234,214,.96); background-image: linear-gradient(rgba(251,234,214,.96), rgba(251,234,214,.96)); box-shadow: 0 25px 70px rgba(35,25,21,.2); backdrop-filter: blur(16px); }
     .event-topline { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
     .event-number { color: var(--rose); font: 400 1rem var(--serif); }
     .event-kicker { margin: 0; color: var(--thyme); font-size: .69rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
@@ -129,7 +131,7 @@
     .map-link svg { width: 16px; height: 16px; }
 
     /* Page III */
-    .story-page { position: relative; display: grid; place-items: center; min-height: 100svh; padding: 90px 22px 60px; text-align: center; background: var(--paper); }
+    .story-page { position: relative; display: grid; place-items: center; min-height: 100svh; padding: 90px 22px 60px; text-align: center; background-color: var(--paper); background-image: linear-gradient(var(--paper), var(--paper)); }
     .story-inner { width: min(100%, 760px); }
     .story-copy { margin: 20px auto 0; font: 400 clamp(2.3rem, 9vw, 4.5rem)/1.1 var(--serif); letter-spacing: -.045em; text-wrap: balance; }
     .story-copy em { color: var(--rose); font-family: var(--serif); font-weight: 400; }
@@ -141,10 +143,10 @@
     .countdown span { display: block; margin-top: 8px; color: var(--thyme); font-size: .64rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
 
     /* Page IV */
-    .closing { position: relative; display: grid; place-items: center; min-height: 100svh; padding: 88px 24px; text-align: center; isolation: isolate; background: var(--champagne); }
+    .closing { position: relative; display: grid; place-items: center; min-height: 100svh; padding: 88px 24px; text-align: center; isolation: isolate; background-color: var(--champagne); background-image: linear-gradient(var(--champagne), var(--champagne)); }
     .closing::before { content: ""; position: absolute; inset: 0; z-index: -2; background: url("assets/garden-v3.png") center / cover no-repeat; opacity: .42; }
     .closing::after { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(251,234,214,.56); }
-    .closing-inner { width: min(100%, 620px); padding: 46px 24px; border-top: 1px solid rgba(56,42,38,.2); border-bottom: 1px solid rgba(56,42,38,.2); background: rgba(251,234,214,.58); backdrop-filter: blur(8px); }
+    .closing-inner { width: min(100%, 620px); padding: 46px 24px; border-top: 1px solid rgba(56,42,38,.2); border-bottom: 1px solid rgba(56,42,38,.2); background-color: rgba(251,234,214,.58); background-image: linear-gradient(rgba(251,234,214,.58), rgba(251,234,214,.58)); backdrop-filter: blur(8px); }
     .closing-message { max-width: 34rem; margin: 0 auto; font: 400 clamp(2rem, 8.5vw, 3.8rem)/1.19 var(--serif); letter-spacing: -.04em; text-wrap: balance; }
     .with-love { margin: 35px 0 7px; color: var(--rose); font: italic 400 clamp(2rem, 9vw, 3rem)/1 var(--serif); }
     .closing h2 { display: grid; place-items: center; gap: 2px; margin: 0; }
@@ -188,7 +190,8 @@
         min-height: 100svh;
         padding: 0 16px max(88px, calc(68px + env(safe-area-inset-bottom)));
         overflow: hidden;
-        background: var(--champagne);
+        background-color: var(--champagne);
+        background-image: linear-gradient(var(--champagne), var(--champagne));
       }
       .event-scene::before {
         position: relative;
@@ -212,16 +215,16 @@
       }
     }
     @media (prefers-color-scheme: dark) {
-      :root { color-scheme: only light; }
-      html, body { color: var(--ink); background-color: var(--champagne); }
-      .cover { color: var(--ink); background-color: var(--paper); }
+      :root { color-scheme: light only; }
+      html, body { color: var(--ink); background-color: var(--champagne); background-image: linear-gradient(var(--champagne), var(--champagne)); }
+      .cover { color: var(--ink); background-color: var(--paper); background-image: linear-gradient(var(--paper), var(--paper)); }
       .formal-page { color: var(--ink); background-color: var(--champagne); }
-      .events-page, .events-title { color: var(--paper); background-color: var(--ink); }
-      .event-scene { color: var(--ink); background-color: var(--champagne); }
-      .event-card { color: var(--ink); background-color: rgba(251,234,214,.96); }
-      .story-page { color: var(--ink); background-color: var(--paper); }
-      .closing { color: var(--ink); background-color: var(--champagne); }
-      img { opacity: 1; }
+      .events-page, .events-title { color: var(--paper); background-color: var(--ink); background-image: linear-gradient(var(--ink), var(--ink)); }
+      .event-scene { color: var(--ink); background-color: var(--champagne); background-image: linear-gradient(var(--champagne), var(--champagne)); }
+      .event-card { color: var(--ink); background-color: rgba(251,234,214,.96); background-image: linear-gradient(rgba(251,234,214,.96), rgba(251,234,214,.96)); }
+      .story-page { color: var(--ink); background-color: var(--paper); background-image: linear-gradient(var(--paper), var(--paper)); }
+      .closing { color: var(--ink); background-color: var(--champagne); background-image: linear-gradient(var(--champagne), var(--champagne)); }
+      img { filter: none; opacity: 1; mix-blend-mode: normal; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; } .feather-field { display: none; } .event-scene::before { transform: none; } }
   </style>
@@ -238,7 +241,7 @@
   <section class="cover" id="cover" aria-label="Wedding invitation cover">
     <div class="cover-inner">
       <blockquote class="cover-verse">“This is the Lord’s doing.”<cite>Psalm 118:23</cite></blockquote>
-      <div class="cover-monogram-slot" aria-hidden="true"><img class="cover-monogram" src="assets/cc-monogram-reference-v2.jpg" alt=""></div>
+      <div class="cover-monogram-slot" aria-hidden="true"><img class="cover-monogram" src="assets/cc-monogram-transparent-v3.png" alt=""></div>
       <h1 class="cover-names"><img src="assets/name-cameron-swash-v1.png" alt="Cameron"><span>&amp;</span><img src="assets/name-christline-swash-v1.png" alt="Christline"></h1>
       <div class="cover-action">
         <button class="open-button" id="openInvitation" type="button">Open invitation <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
