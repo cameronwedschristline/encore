@@ -53,7 +53,7 @@
 
     /* Cover */
     .cover { position: fixed; inset: 0; z-index: 120; display: grid; min-height: 100svh; padding: max(26px, env(safe-area-inset-top)) 24px max(28px, env(safe-area-inset-bottom)); text-align: center; isolation: isolate; background: var(--paper); transition: opacity .85s ease .35s, visibility .85s ease .35s; }
-    .cover::before { content: ""; position: absolute; inset: 0; z-index: -2; background: url("assets/cover-curtains-offwhite-v4.png") center / cover no-repeat; transform: scale(1.01); transition: transform 1.4s cubic-bezier(.2,.7,.2,1); }
+    .cover::before { content: ""; position: absolute; inset: 0; z-index: -2; background: url("assets/cover-curtains-offwhite-v4.jpg") center / cover no-repeat; transform: scale(1.01); transition: transform 1.4s cubic-bezier(.2,.7,.2,1); }
     .cover::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(255,250,243,.02), rgba(240,196,203,.035) 56%, rgba(200,125,135,.055)); }
     .cover-inner { display: grid; grid-template-rows: auto auto auto 1fr; width: min(100%, 650px); height: 100%; margin: auto; }
     .cover-verse { max-width: 320px; margin: clamp(54px, 8vh, 86px) auto 0; color: var(--ink-soft); font: 400 1.08rem/1.55 var(--serif); }
@@ -110,10 +110,10 @@
     .event-scene { --parallax-y: 0px; position: relative; display: flex; align-items: flex-end; min-height: 100svh; padding: 22px 20px 30px; isolation: isolate; overflow: hidden; background: var(--champagne); }
     .event-scene::before { content: ""; position: absolute; inset: -5%; z-index: -2; background-position: center; background-size: cover; transform: translate3d(0, var(--parallax-y), 0) scale(1.06); will-change: transform; }
     .event-scene::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(31,23,20,.03) 22%, rgba(31,23,20,.12) 52%, rgba(31,23,20,.55) 100%); }
-    .engagement::before { background-image: url("assets/engagement-illustrated-v1.png"); background-position: center 68%; }
-    .church::before { background-image: url("assets/church-illustrated-v1.png"); }
-    .reception::before { background-image: url("assets/reception-illustrated-v1.png"); }
-    .encore::before { background-image: url("assets/coimbatore-encore-balcony-v1.png"); background-position: center; }
+    .engagement::before { background-image: url("assets/engagement-illustrated-v1.jpg"); background-position: center 68%; }
+    .church::before { background-image: url("assets/church-illustrated-v1.jpg"); }
+    .reception::before { background-image: url("assets/reception-illustrated-v1.jpg"); }
+    .encore::before { background-image: url("assets/coimbatore-encore-balcony-v1.jpg"); background-position: center; }
     .event-card { position: relative; z-index: 1; width: min(100%, 630px); margin: 0 auto; padding: 28px 24px 24px; border: 1px solid rgba(200,125,135,.28); background: rgba(251,234,214,.96); box-shadow: 0 25px 70px rgba(35,25,21,.2); backdrop-filter: blur(16px); }
     .event-topline { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
     .event-number { color: var(--rose); font: 400 1rem var(--serif); }
@@ -238,7 +238,7 @@
   <section class="cover" id="cover" aria-label="Wedding invitation cover">
     <div class="cover-inner">
       <blockquote class="cover-verse">“This is the Lord’s doing.”<cite>Psalm 118:23</cite></blockquote>
-      <div class="cover-monogram-slot" aria-hidden="true"><img class="cover-monogram" src="assets/cc-monogram-reference-v2.png" alt=""></div>
+      <div class="cover-monogram-slot" aria-hidden="true"><img class="cover-monogram" src="assets/cc-monogram-reference-v2.jpg" alt=""></div>
       <h1 class="cover-names"><img src="assets/name-cameron-swash-v1.png" alt="Cameron"><span>&amp;</span><img src="assets/name-christline-swash-v1.png" alt="Christline"></h1>
       <div class="cover-action">
         <button class="open-button" id="openInvitation" type="button">Open invitation <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
