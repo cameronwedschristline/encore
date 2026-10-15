@@ -170,6 +170,47 @@
       .event-scene { min-height: 88vh; background-attachment: fixed; }
       .event-card { width: 540px; }
     }
+    @media (max-width: 759px) {
+      /* Keep the complete curtain frame visible on differently proportioned phones. */
+      .cover::before {
+        background-color: var(--paper);
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: none;
+      }
+
+      /* On mobile the illustration and card are separate layers, so the focal art
+         is never hidden behind the invitation details. */
+      .event-scene {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 100svh;
+        padding: 0 16px max(88px, calc(68px + env(safe-area-inset-bottom)));
+        overflow: hidden;
+        background: var(--champagne);
+      }
+      .event-scene::before {
+        position: relative;
+        inset: auto;
+        z-index: 0;
+        flex: 0 0 auto;
+        width: calc(100% + 32px);
+        height: clamp(300px, 94vw, 420px);
+        margin: 0 -16px;
+        background-position: center top !important;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        transform: none !important;
+        will-change: auto;
+      }
+      .event-scene::after { display: none; }
+      .event-card {
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: 0 18px 45px rgba(35,25,21,.14);
+      }
+    }
     @media (prefers-color-scheme: dark) {
       :root { color-scheme: only light; }
       html, body { color: var(--ink); background-color: var(--champagne); }
@@ -182,7 +223,7 @@
       .closing { color: var(--ink); background-color: var(--champagne); }
       img { opacity: 1; }
     }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; } .feather-field { display: none; } .event-scene::before { transform: scale(1.06); } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; } .feather-field { display: none; } .event-scene::before { transform: none; } }
   </style>
 </head>
 <body class="locked">
